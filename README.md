@@ -1,5 +1,4 @@
 # LongevityInTime
-The result;
 ![result](https://user-images.githubusercontent.com/76619772/170886212-aced2842-1a37-4f93-8588-4c21780beb56.png)
 
 I have completed the task called "mental health web scrape" in the AI part. 
