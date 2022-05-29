@@ -1,6 +1,4 @@
 import pandas as pd
-df = pd.read_csv('mental_health.csv')
-
 
 #imports for preprocessing
 import nltk
@@ -46,14 +44,14 @@ def lemmatize(text):
         temp += lemmatizer.lemmatize(word) + ' '
     return temp
 
-
-
+#read the csv file by using Pandas
+df = pd.read_csv('mental_health.csv')
 
 #join hashtags and tweets
 df['linked'] = df['hashtags'] + df['tweet']
 
 #apply preprocessing functions
-df['preprocessed'] = df['linked'].apply(remove_puncts)
+df['preprocessed'] = df['linked'].apply(lemmatize)
 
 #save the preprocessed data
 df.to_csv('preprocessed.csv')
