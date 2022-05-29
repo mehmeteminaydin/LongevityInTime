@@ -16,6 +16,7 @@ for index, row in df.iterrows():
             if(name == word):
                 disorder_list[name] += 1
 
+#scaling values between 0-100
 total = sum(disorder_list.values())
 
 for name in disorder_list:
